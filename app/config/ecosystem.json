@@ -1,0 +1,19 @@
+{
+    "apps": [
+        {
+            "name": "simple-service",
+            "script": "app/index.js",
+            "instances": 0,
+            "exec_mode": "cluster_mode",
+            "env": {
+                "NODE_ENV": "dev"
+            },
+            "env_test": {
+                "NODE_ENV": "test"
+            },
+            "env_prod": {
+                "NODE_ENV": "prod"
+            }
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "name": "simple-service",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app/index.js",
+    "scripts": {
+        "app-dev": "pm2 kill && pm2 startOrRestart app/config/ecosystem.json --env dev",
+        "app-test": "pm2 kill && pm2 startOrRestart app/config/ecosystem.json --env test",
+        "app-prod": "pm2 kill && pm2 startOrRestart app/config/ecosystem.json --env prod",
+        "test": "./node_modules/.bin/_mocha app/test/**/*"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/pfryga/simple-service.git"
+    },
+    "author": "piotr.fryga@allegro.pl",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/pfryga/simple-service/issues"
+    },
+    "homepage": "https://github.com/pfryga/simple-service#readme",
+    "dependencies": {
+        "express": "^4.13.3",
+        "gulp": "^3.9.0",
+        "pm2": "^0.14.7"
+    },
+    "devDependencies": {
+        "chai": "^3.2.0",
+        "mocha": "^2.3.2"
+    }
+}
